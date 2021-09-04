@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="bankscript.js"></script>
+    <style>
+        h8 {
+            color: red;
+            font-size: medium;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body style="background-image: url(images/bank1.jpg);">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" style="background-color:rgb(235, 64, 52);">
+            <a class="navbar-brand"> <img src="images/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="nav justify-content-end" style="background-color:orange">
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Careers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Business With GHB</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary" onclick="bank.logout()">Log Out</button>
+                </li>
+        </div>
+        </div>
+    </nav>
+    <ul class="nav justify-content-end" style="background-color:violet;">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">OPEN AN ACCOUNT</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">ONLINE TRADING</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">MUTUAL FUND</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">DEPOSITS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">INSURANCE PLANS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">DEBIT/CREDIT CARDS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">PENSION PLANS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">EASY LOANS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">ONLINE LOCKER</a>
+        </li>
+    </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+
+                <div class="text-center"
+                    style="text-decoration:underline; color: red; font-weight: bolder;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: medium;">
+                    NEW USER / REGISTER HERE FOR INTERNET BANKING
+
+                </div>
+
+                <div class="mb3">
+                    <input type="text" name="" id="name" placeholder="Name" class="form-control">
+                </div>
+                <div class="mb3">
+                    <input type="text" name="" id="acno" placeholder="Account Number" class="form-control">
+
+                </div>
+                <div class="mb3">
+                    <input type="text" name="" id="actype" placeholder="Account Type" class="form-control">
+
+                </div>
+                <div class="mb3">
+                    <input type="text" name="" id="bal" placeholder="Balance" class="form-control">
+
+                </div>
+                <div class="mb3">
+                    <input type="password" name="" id="pwd" placeholder="Password" class="form-control">
+
+                </div>
+                <br>
+                <div class="text-center">
+                    <button class="btn btn-primary" onclick="bank.createAccount()"> Register</button>
+
+                </div>
+                <br>
+                <h8>Already A Member?</h8> <a href="bank.html">Login Here</a>
+
+
+            </div>
+            <div class="col-sm-5"></div>
+
+            <div class="col-3">
+                <div class="input-group rounded">
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                        aria-describedby="search-addon" />
+                    <span class="input-group-text border-0 " id="search-addon">
+                        <i class="fas fa-search"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+</body>
+
+</html>

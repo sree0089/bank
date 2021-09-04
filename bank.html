@@ -1,0 +1,133 @@
+<!-- html to create account(account number,name,type,balance,password)
+    login page
+    userhome.html(landing page -->)
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="bankscript.js"></script>
+    <style>
+        h1 {
+            color: red;
+            font-weight: bolder;
+        }
+
+        h8 {
+            color: red;
+            font-size: medium;
+        }
+    </style>
+
+</head>
+
+<body style="background-image: url(images/bank1.jpg)">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light pt-0">
+        <div class="container-fluid" style="background-color:rgb(235, 64, 52);">
+            <a class="navbar-brand"> <img src="images/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="nav justify-content-end" style="background-color:orange">
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Careers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Business With GHB</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary" onclick="bank.logout()">Log Out</button>
+                </li>
+        </div>
+        </div>
+    </nav>
+    <ul class="nav justify-content-end" style="background-color:violet;">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">OPEN AN ACCOUNTS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">ONLINE TRADING</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">MUTUAL FUND</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">DEPOSITS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">INSURANCE PLANS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">DEBIT/CREDIT CARDS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">PENSION PLANS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">EASY LOANS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">ONLINE LOCKER</a>
+        </li>
+    </ul>
+
+    <div class="row">
+        <div class="col-sm-12 mt-5 ms-5">
+            <h1>User Login</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 ms-5">
+                <input type="text" name="" id="acno" placeholder="Enter User Name">
+            </div>
+            <div class="row">
+                <div class="col-sm-4 ms-5">
+                    <input type="password" name="" id="pwd" placeholder="Enter Your Password">
+
+                </div>
+            </div>
+            <div class="col-sm-2 ms-5">
+                <br>
+                <div class="text-center">
+                    <button class="btn btn-primary" onclick="bank.authenticate()">Log In</button>
+
+                </div>
+                <div>
+                    <h8>Forgot Username/Password</h8>
+                    <br>
+                    <div class="text-center">
+                        <a href="bankindex.html">Click Here</a>
+
+                    </div>
+
+                </div>
+
+                <div class="col"></div>
+            </div>
+        </div>
+</body>

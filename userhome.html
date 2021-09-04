@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+<script src="bankscript.js"></script>
+<style>
+  h6{
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: small;
+      font-weight: lighter;
+      font-style: italic;
+      color: gold;
+  }
+
+</style>
+
+</head>
+<body>
+  <body style="background-image: url(images/bank3.jpg); background-repeat:no-repeat; background-size:100% 100%;background-attachment: fixed;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid" style="background-color:rgb(235, 64, 52);">
+            <a class="navbar-brand"> <img src="images/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="nav justify-content-end" style="background-color:orange">
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="bank.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" onclick="bank.balanceEnquiry()">Balance Enquiry</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#exampleModal" class="nav-link active" aria-current="page" data-bs-toggle="modal">Fund Transfer </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"><span id="user"></span></a>
+              </li>
+                <li class="nav-item">
+                    <button class="btn btn-primary" onclick="bank.logout()">Log Out</button>
+                </li>
+        </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Transfer amount</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <input type="text" name="" id="toacno" placeholder="toaccount number" mt-2 class="form-control">
+                  <input type="number" name="" id="amt" placeholder="Enter amount" mt-2 class="form-control" >
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" onclick="bank.fundTransfer()">Proceed</button>
+                </div>
+              </div>
+            </div>
+          </div>
+   <div class="row">
+       <div class="col"></div>
+       <div class="col"></div>       
+       <div class="col"></div>
+   </div>
+    </div>
+</body>
+<script>
+    let logeduser=JSON.parse(sessionStorage.getItem(sessionStorage.key(0)))
+    console.log(logeduser);
+    user.innerHTML=logeduser.account_number 
+</script>
+</html>
